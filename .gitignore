@@ -1,0 +1,35 @@
+# ========================
+# PYTHON IGNORES
+# ========================
+__pycache__/
+*.py[cod]
+*$py.class
+
+# ========================
+# ENVIRONMENT & SETTINGS
+# ========================
+.env
+.venv
+env/
+venv/
+.vscode/
+
+# ========================
+# PROJECT DATA (DO NOT UPLOAD)
+# ========================
+# Ignore the main input data folder at the root
+data/
+
+# Ignore the main output results folder at the root
+results/
+
+# Safety net: Ignore loose data files anywhere in the repo
+*.vtt
+*.json
+*.csv
+
+# ========================
+# OS GENERATED FILES
+# ========================
+.DS_Store
+Thumbs.db
