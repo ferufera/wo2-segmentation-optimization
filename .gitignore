@@ -1,42 +1,35 @@
-# =====================================
-# PYTHON BASICS
-# =====================================
+# ========================
+# PYTHON IGNORES
+# ========================
 __pycache__/
 *.py[cod]
 *$py.class
-*.so
-.venv/
+
+# ========================
+# ENVIRONMENT & SETTINGS
+# ========================
 .env
-
-# =====================================
-# PACKAGING & LOGS
-# =====================================
-build/
-dist/
-*.egg-info/
-pip-log.txt
-
-# =====================================
-# OS & EDITOR (Important!)
-# =====================================
-# Ignore your local VS Code settings (contains D:/ paths)
+.venv
+env/
+venv/
 .vscode/
-.idea/
 
-# Windows/Mac artifacts
-Thumbs.db
-.DS_Store
-
-# =====================================
-# PROJECT DATA (Do not upload!)
-# =====================================
-# 1. Raw Input Data
+# ========================
+# PROJECT DATA (DO NOT UPLOAD)
+# ========================
+# Ignore the main input data folder at the root
 data/
-interview_transcripts/
 
-# 2. Generated Results
-output/
+# Ignore the main output results folder at the root
 results/
 
-# 3. External Repos (if inside the folder)
-wo2-oral-history-matching-pipeline-main/
+# Safety net: Ignore loose data files anywhere in the repo
+*.vtt
+*.json
+*.csv
+
+# ========================
+# OS GENERATED FILES
+# ========================
+.DS_Store
+Thumbs.db
