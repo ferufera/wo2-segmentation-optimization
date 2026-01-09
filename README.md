@@ -34,23 +34,19 @@ Based on the analysis, we developed `refined_prompts.py` (located in the optimiz
 
 ## Repository Structure
 
-wo2-segmentation-optimization/
-
-├── 01_analysis/
-│   ├── scripts/             # Python scripts used to calculate the rejection rates
-│   └── reports/             # Text files containing the evidence and stats
-│
-├── 02_optimization/         # Main Processing Engine
-│   ├── models.py            # Data structures (Caption, Segment) from WO2Net
-│   ├── refined_prompts.py   # The optimized prompt logic (The Solution)
-│   ├── process_vtt_batch.py # The script that runs the prompts on your data
-│   └── original_prompts...  # Archive of the old logic for comparison
-│
-├── data/                    # Input Data (Not on GitHub)
-│   └── vtt_files/           # Place your raw .vtt interview files here
-│
-└── results/                 # Output Data (Not on GitHub)
-    └── ready_prompts/       # The script saves the generated prompt files here
+* `wo2-segmentation-optimization/`
+    * `01_analysis/`
+        * `scripts/` – Python scripts used to calculate the rejection rates
+        * `reports/` – Text files containing the evidence and stats
+    * `02_optimization/` – **Main Processing Engine**
+        * `models.py` – Data structures (Caption, Segment) from WO2Net
+        * `refined_prompts.py` – The optimized prompt logic (The Solution)
+        * `process_vtt_batch.py` – The script that runs the prompts on your data
+        * `original_prompts_archive.py` – Archive of the old logic for comparison
+    * `data/` – Input Data (Not on GitHub)
+        * `vtt_files/` – Place your raw .vtt interview files here
+    * `results/` – Output Data (Not on GitHub)
+        * `ready_prompts/` – The script saves the generated prompt files here
 
 ## Usage
 
