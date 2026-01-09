@@ -1,0 +1,43 @@
+Loading 355 enriched segment files...
+Loading 1250 validation files...
+
+========================================
+ ANALYSIS OF SEGMENT REJECTIONS/EDITS
+========================================
+
+[DATA] Frequency of Edit Types:
+  - TITLE_EDIT: 179
+  - CONCEPT_REMOVED: 851
+  - FRAGMENT_REMOVED: 45
+  - END_TIME_EDIT: 68
+  - START_TIME_EDIT: 70
+
+[HYPOTHESIS 1] Concept Relevance
+Are specific types of concepts being removed consistently?
+  Total concepts removed: 851
+  Top removed URIs: [('https://data.niod.nl/WO2_Thesaurus/2005', 51), ('https://data.niod.nl/WO2_Thesaurus/1991', 32), ('https://data.niod.nl/WO2_Thesaurus/1940', 26)]     
+
+[HYPOTHESIS 2] Temporal Precision
+  70 segments required start time adjustments.
+  Common comments on start time edits:
+Er wordt ook gesproken over Reichenbach en Birk...
+  Ontbrekende concepten:\nDen Bosch\nKinderbarak\n
+
+  -> Hypothesis: Original segmentation may include pre-interview 'chatter' or silence.
+
+[HYPOTHESIS 3] Content Value
+  45 segments were completely removed.
+  Comments associated with removal:
+['' 'is introductie dus zegt inhoudelijk niet zoveel'
+ 'Onsamenhangend en voegt m.i. weinig toe.'
+ 'Geen video met ondersteunende indeling en MIME-type gevonden'
+ 'Fragment is inhoudelijk niet sterk '
+ 'Met alle respect voor de verteller maar m.i. onsamenhangend verhaal en niet ter zake doende.'
+ 'Weinig informatie vanuit dit interview. M.i. niet zo relevant.'
+ 'Onsamenhangend verhaal en voor luisteraar niet te begrijpen vanwege alle namen. Helaas.']
+  -> Hypothesis: 'Introductory' or 'Setup' segments are viewed as low value.
+
+[QUALITATIVE] Comment Keyword Scan
+  Scanning 778 comments for keywords: ['intro', 'niet relevant', 'onbelangrijk', 'dubbel', 'fout']
+  - 'intro' appeared 3 times
+  - 'dubbel' appeared 1 times

@@ -1,0 +1,38 @@
+Loading 355 enriched segment files...
+Loading 1250 validation files...
+
+==================================================
+ CROWD CONSENSUS ANALYSIS REPORT
+==================================================
+
+[Segment Status Distribution]
+consensus_status
+REJECTED    373
+ACCEPTED    363
+CONFLICT     44
+
+------------------------------
+ ANALYSIS OF REJECTED SEGMENTS (Consensus > 60%)
+------------------------------
+
+[Primary Reasons for Rejection]
+  - REMOVE_CONCEPT: 261 segments
+  - EDIT_TITLE: 140 segments
+  - EDIT_END: 46 segments
+  - EDIT_START: 39 segments
+  - REMOVE_FRAGMENT: 36 segments
+
+[Hypothesis Development - Evidence]
+
+> HYPOTHESIS: Why are segments being removed? (36 cases)
+  Sample Comments: ['Opnames t/m regel 3 verwijderen.\nConcept toevoegen:\n- Reichenbach | Er wordt ook gesproken over Reichenbach en Birkenau | is introductie dus zegt inhoudelijk niet zoveel', '', '']
+
+> HYPOTHESIS: Why are start times being edited? (39 cases)
+  Sample Comments: ['Opnames t/m regel 3 verwijderen.\nConcept toevoegen:\n- Reichenbach | Er wordt ook gesproken over Reichenbach en Birkenau | is introductie dus zegt inhoudelijk niet zoveel', 'Ontbrekende concepten:\nDiamantfabriek\nNaaiatelier\nAmersfoort\n', "Wehrmacht SS'ers\nNSB politieagenten \n"]
+
+------------------------------
+ ANALYSIS OF CONFLICT SEGMENTS (44 cases)
+------------------------------
+Users disagreed on these segments. This often indicates subjective boundaries.        
+Sample Conflict Comments:
+['Ontbrekende concepten:\nDiamantsnijders', 'Ontbrekende concepten:\nDen Bosch\nKinderbarak\n', '']
