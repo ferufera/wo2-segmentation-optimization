@@ -62,3 +62,8 @@ To generate new, optimized prompts using the refined logic, follow these steps:
 
 3.  **View Results**
     The script will parse the interviews, apply the new prompt rules, and save the resulting text files in `results/ready_prompts/`.
+
+## Authors - Group 1
+
+* **Feruza Bakhtiyorova (Artificial Intelligence)** – Data preparation, rejection analysis, prompt engineering, repository setup, and methodology.
+* **Dunya Boon (Communication)** – Visualization of results, literature research, and academic reporting (upcoming).
