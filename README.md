@@ -65,5 +65,5 @@ To generate new, optimized prompts using the refined logic, follow these steps:
 
 ## Authors - Group 1
 
-* **Feruza Bakhtiyorova (Artificial Intelligence)** – Data preparation, rejection analysis, prompt engineering, repository setup, and methodology.
+* **Feruza Bakhtiyorova (Artificial Intelligence)** – Data preparation, rejection analysis, prompt engineering, repository setup, and methodology (in the process).
 * **Dunya Boon (Communication)** – Visualization of results, literature research, and academic reporting (upcoming).
