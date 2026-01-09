@@ -35,6 +35,7 @@ Based on the analysis, we developed `refined_prompts.py` (located in the optimiz
 ## Repository Structure
 
 wo2-segmentation-optimization/
+
 ├── 01_analysis/
 │   ├── scripts/             # Python scripts used to calculate the rejection rates
 │   └── reports/             # Text files containing the evidence and stats
