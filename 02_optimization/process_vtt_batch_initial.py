@@ -16,36 +16,19 @@ OUTPUT_DIR = os.path.join(current_dir, '..', 'results', 'ready_prompts')
 # ==============================================================================
 # LOCAL IMPORTS
 # ==============================================================================
-# Ensure the current directory is in the path so we can import our modules
-sys.path.append(current_dir)
-
 try:
     from models import Caption
-    
-    # 1. Import our Refined Logic (The Solution)
-    # This module contains the optimized prompt engineering rules developed in Phase 2
-    from refined_prompts import _build_segment_prompt as build_refined
-    
-    # 2. Import the Original Archive Logic (The Baseline)
-    # This module contains the original prompts used by WO2Net, used here for comparison
-    from original_prompts_archive import _build_segment_prompt as build_original
-    
-    print("Success: Loaded both refined and original logic modules.")
-
+    from refined_prompts import _build_segment_prompt
+    print("Success: Loaded local modules.")
 except ImportError as e:
-    print("\n[CRITICAL ERROR] Missing required files.")
+    print(f"[ERROR] Missing files. Make sure models.py and refined_prompts.py are in {current_dir}")
     print(f"Details: {e}")
-    print("Please ensure the following files are in '02_optimization/':")
-    print("  - models.py (Must contain Caption and Segment classes)")
-    print("  - refined_prompts.py")
-    print("  - original_prompts_archive.py")
     sys.exit(1)
 
 # ==============================================================================
 # LOGIC
 # ==============================================================================
 def parse_vtt_time(timestamp):
-    """Converts VTT timestamp (00:01:30.500) to seconds (90.5)."""
     parts = timestamp.replace(',', '.').split(':')
     if len(parts) == 3:
         h, m, s = parts
@@ -56,14 +39,13 @@ def parse_vtt_time(timestamp):
     return 0.0
 
 def parse_vtt_file(filepath):
-    """Parses a .vtt file into a list of Caption objects for processing."""
     captions = []
     with open(filepath, 'r', encoding='utf-8') as f:
         content = f.read()
     
-    # Regex to extract timestamps and text from VTT format
-    # The first "HH:" group is optional (to avoid Different Timestamp Formats Problem)
-    pattern = re.compile(r'((?:\d{2}:)?\d{2}:\d{2}[\.,]\d{3}) --> ((?:\d{2}:)?\d{2}:\d{2}[\.,]\d{3}).*?\n(.*?)(?=\n\n|\Z)', re.DOTALL)
+    # Regex: (Start) --> (End) \n (Text)
+    pattern = re.compile(r'(\d{2}:?\d{2}:\d{2}[\.,]\d{3}) --> (\d{2}:?\d{2}:\d{2}[\.,]\d{3}).*?\n(.*?)(?=\n\n|\Z)', re.DOTALL)
+    
     for match in pattern.finditer(content):
         text_content = match.group(3).strip().replace('\n', ' ')
         if text_content:
@@ -87,7 +69,7 @@ def process_batch():
         print("[WARNING] No .vtt files found in data folder.")
         return
 
-    print(f"Processing {len(vtt_files)} files (Generating A/B Comparison)...")
+    print(f"Processing {len(vtt_files)} files...")
     
     for filepath in vtt_files:
         filename = os.path.basename(filepath)
@@ -96,26 +78,16 @@ def process_batch():
         captions = parse_vtt_file(filepath)
         if captions:
             try:
-                # --- A: GENERATE ORIGINAL (CONTROL GROUP) ---
-                # We generate the prompt using the old logic to serve as a baseline
-                prompt_old = build_original(captions)
-                path_old = os.path.join(OUTPUT_DIR, filename.replace('.vtt', '_ORIGINAL.txt'))
-                with open(path_old, 'w', encoding='utf-8') as f:
-                    f.write(prompt_old)
-
-                # --- B: GENERATE REFINED (EXPERIMENTAL GROUP) ---
-                # We generate the prompt using our new optimized logic
-                prompt_new = build_refined(captions)
-                path_new = os.path.join(OUTPUT_DIR, filename.replace('.vtt', '_REFINED.txt'))
-                with open(path_new, 'w', encoding='utf-8') as f:
-                    f.write(prompt_new)
-                    
+                prompt = _build_segment_prompt(captions)
+                out_path = os.path.join(OUTPUT_DIR, filename.replace('.vtt', '_prompt.txt'))
+                with open(out_path, 'w', encoding='utf-8') as f:
+                    f.write(prompt)
             except Exception as e:
-                print(f"    [!] Error processing {filename}: {e}")
+                print(f"    [!] Error: {e}")
         else:
             print("    [!] No captions found.")
 
-    print(f"\nDone! A/B Comparison files saved to: {os.path.abspath(OUTPUT_DIR)}")
+    print(f"\nDone! Results saved to: {os.path.abspath(OUTPUT_DIR)}")
 
 if __name__ == "__main__":
     process_batch()
