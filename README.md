@@ -46,9 +46,9 @@ Based on the analysis, we developed `refined_prompts.py` (located in the optimiz
         * `original_prompts_archive.py` – Archive of the old logic for comparison
     * `data/` – Input Data (Not on GitHub)
         * `vtt_files/` – Place your raw .vtt interview files here
-        * crowdsource_data/ - Combined Enriched Segments & Validations
-             * enriched_segments.json - Aggregated from original individual enriched segment files
-             * segment_validations.json - Aggregated from original individual validation files       
+        * `crowdsource_data/` - Combined Enriched Segments & Validations
+             * `enriched_segments.json` - Aggregated from original individual enriched segment files
+             * `segment_validations.json` - Aggregated from original individual validation files       
     * `results/` – Output Data (Not on GitHub)
         * `ready_prompts/` – The script saves the generated prompt files here
         * `json_outputs/` - Raw JSON outputs from ChatGPT (Input for comparison)
