@@ -42,11 +42,17 @@ Based on the analysis, we developed `refined_prompts.py` (located in the optimiz
         * `models.py` – Data structures (Caption, Segment) from WO2Net
         * `refined_prompts.py` – The optimized prompt logic (The Solution)
         * `process_vtt_batch.py` – The script that runs the prompts on your data
+        * `compare_results.py` - Script to compare Original vs Refined outputs
         * `original_prompts_archive.py` – Archive of the old logic for comparison
     * `data/` – Input Data (Not on GitHub)
         * `vtt_files/` – Place your raw .vtt interview files here
+        * `crowdsource_data/` - Combined Enriched Segments & Validations
+             * `enriched_segments.json` - Aggregated from original individual enriched segment files
+             * `segment_validations.json` - Aggregated from original individual validation files       
     * `results/` – Output Data (Not on GitHub)
         * `ready_prompts/` – The script saves the generated prompt files here
+        * `json_outputs/` - Raw JSON outputs from ChatGPT (Input for comparison)
+        * `analysis_reports/` - Generated reports comparing performance
 
 ## Usage
 
