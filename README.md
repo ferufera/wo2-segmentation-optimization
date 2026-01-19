@@ -39,11 +39,11 @@ Based on the analysis, we developed `refined_prompts.py` (located in the optimiz
         * `scripts/` – Python scripts used to calculate the rejection rates
         * `reports/` – Text files containing the evidence and stats
     * `02_optimization/` – **Main Processing Engine**
-        * `models.py` – Data structures (Caption, Segment) from WO2Net
+        * `models.py` – Data structures (Caption, Segment) from WO2Net (not on GitHub due to privacy reasons)
         * `refined_prompts.py` – The optimized prompt logic (The Solution)
         * `process_vtt_batch.py` – The script that runs the prompts on your data
         * `compare_results.py` - Script to compare Original vs Refined outputs
-        * `original_prompts_archive.py` – Archive of the old logic for comparison
+        * `original_prompts_archive.py` – Archive of the old logic for comparison (not on GitHub due to privacy reasons)
     * `data/` – Input Data (Not on GitHub)
         * `vtt_files/` – Place your raw .vtt interview files here
         * `crowdsource_data/` - Combined Enriched Segments & Validations
