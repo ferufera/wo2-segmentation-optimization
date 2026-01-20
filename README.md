@@ -27,9 +27,9 @@ Using the diagnostic scripts in the analysis folder, we identified four primary 
 
 Based on the analysis, we developed `refined_prompts.py` (located in the optimization folder) to implement four specific fixes:
 
-1.  **Rule 2 (Anti-Chatter):** Explicitly instructs the model to ignore technical setup phrases ("Band loopt") to fix temporal drift.
-2.  **Rule 3 (Merge Intros):** Forces the model to merge biographical introductions into the first substantive narrative segment.
-3.  **Title Specificity:** Updated prompt constraints to forbid generic templates and enforce a 15-word limit focusing on specific events.
+1.  **Anti-Chatter:** Explicitly instructs the model to ignore technical setup phrases ("Band loopt") to fix temporal drift.
+2.  **Merge Intros:** Forces the model to merge biographical introductions into the first substantive narrative segment.
+3.  **Title Specificity:** Updated prompt constraints to forbid generic templates and enforce a 15-word limit, focusing on specific events.
 4.  **Concept Specificity:** Revised matching logic to prioritize Specific Named Entities over broad ontological themes.
 
 ## Repository Structure
