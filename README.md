@@ -40,6 +40,8 @@ Based on the analysis, we developed `refined_prompts.py` (located in the optimiz
         * `reports/` - Text files containing the evidence and stats
         * `analysis_scripts_overview.md` - Overview of the analysis pipeline and how the scripts connect, from raw votes to consensus decisions.
     * `02_optimization/` - **Main Processing Engine**
+        * `reports/`
+             *`prompt_comparison_analysis.md` - Analysis comparing original vs refined prompt outputs
         * `models.py` - Data structures (Caption, Segment) from WO2Net (not on GitHub due to privacy reasons)
         * `refined_prompts.py` - The optimized prompt logic (The Solution)
         * `process_vtt_batch.py` - The script that runs the prompts on your data
