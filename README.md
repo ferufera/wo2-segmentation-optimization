@@ -36,22 +36,22 @@ Based on the analysis, we developed `refined_prompts.py` (located in the optimiz
 
 * `wo2-segmentation-optimization/`
     * `01_analysis/`
-        * `scripts/` – Python scripts used to calculate the rejection rates
-        * `reports/` – Text files containing the evidence and stats
-        * `analysis_scripts_overview.md` — Overview of the analysis pipeline and how the scripts connect, from raw votes to consensus decisions.
-    * `02_optimization/` – **Main Processing Engine**
-        * `models.py` – Data structures (Caption, Segment) from WO2Net (not on GitHub due to privacy reasons)
-        * `refined_prompts.py` – The optimized prompt logic (The Solution)
-        * `process_vtt_batch.py` – The script that runs the prompts on your data
+        * `scripts/` - Python scripts used to calculate the rejection rates
+        * `reports/` - Text files containing the evidence and stats
+        * `analysis_scripts_overview.md` - Overview of the analysis pipeline and how the scripts connect, from raw votes to consensus decisions.
+    * `02_optimization/` - **Main Processing Engine**
+        * `models.py` - Data structures (Caption, Segment) from WO2Net (not on GitHub due to privacy reasons)
+        * `refined_prompts.py` - The optimized prompt logic (The Solution)
+        * `process_vtt_batch.py` - The script that runs the prompts on your data
         * `compare_results.py` - Script to compare Original vs Refined outputs
-        * `original_prompts_archive.py` – Archive of the old logic for comparison (not on GitHub due to privacy reasons)
+        * `original_prompts_archive.py` - Archive of the old logic for comparison (not on GitHub due to privacy reasons)
     * `data/` – Input Data (Not on GitHub)
-        * `vtt_files/` – Place your raw .vtt interview files here
+        * `vtt_files/` - Place your raw .vtt interview files here
         * `crowdsource_data/` - Combined Enriched Segments & Validations
              * `enriched_segments.json` - Aggregated from original individual enriched segment files
              * `segment_validations.json` - Aggregated from original individual validation files       
-    * `results/` – Output Data (Not on GitHub)
-        * `ready_prompts/` – The script saves the generated prompt files here
+    * `results/` - Output Data (Not on GitHub)
+        * `ready_prompts/` - The script saves the generated prompt files here
         * `json_outputs/` - Raw JSON outputs from ChatGPT (Input for comparison)
         * `analysis_reports/` - Generated reports comparing performance
 
@@ -72,5 +72,5 @@ To generate new, optimized prompts using the refined logic, follow these steps:
 
 ## Authors - Group 1
 
-* **Feruza Bakhtiyorova (Artificial Intelligence)** – Data preparation, rejection analysis, prompt engineering, repository setup, and methodology (in the process).
-* **Dunya Boon (Communication)** – Visualization of results, literature research, and academic reporting (upcoming).
+* **Feruza Bakhtiyorova (Artificial Intelligence)** - Data preparation, rejection analysis, prompt engineering, repository setup, and methodology (in the process).
+* **Dunya Boon (Communication)** - Visualization of results, literature research, and academic reporting (upcoming).
