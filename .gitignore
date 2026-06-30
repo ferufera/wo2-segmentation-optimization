@@ -1,35 +1,64 @@
-# ========================
-# PYTHON IGNORES
-# ========================
+```gitignore
 __pycache__/
 *.py[cod]
 *$py.class
 
 # ========================
-# ENVIRONMENT & SETTINGS
+# ENVIRONMENTS & LOCAL SETTINGS
 # ========================
 .env
-.venv
+.venv/
 env/
 venv/
 .vscode/
-
-# ========================
-# PROJECT DATA (DO NOT UPLOAD)
-# ========================
-# Ignore the main input data folder at the root
-data/
-
-# Ignore the main output results folder at the root
-results/
-
-# Safety net: Ignore loose data files anywhere in the repo
-*.vtt
-*.json
-*.csv
 
 # ========================
 # OS GENERATED FILES
 # ========================
 .DS_Store
 Thumbs.db
+
+# ========================
+# PRIVATE WO2NET DATA
+# ========================
+# Raw interview and project data should not be uploaded.
+data/*
+!data/README.md
+
+03_thesis_kg_rag/data/*
+!03_thesis_kg_rag/data/README.md
+
+# ========================
+# GENERATED OUTPUTS
+# ========================
+# These may contain interview excerpts, prompts, LLM outputs, validation data, or expert evaluation material.
+results/*
+!results/README.md
+
+03_thesis_kg_rag/results/*
+!03_thesis_kg_rag/results/README.md
+
+# ========================
+# SENSITIVE FILE TYPES
+# ========================
+*.vtt
+*.xlsx
+*.xls
+
+# Expert evaluation and consent material
+*expert*
+*consent*
+
+# ========================
+# PROJECT-SPECIFIC PRIVATE DATA FILES
+# ========================
+enriched_segments.json
+segment_validations.json
+evaluation_segments.json
+combined_expert_ratings.csv
+expert_rating_summary_by_method.csv
+expert_rating_summary_by_case.csv
+expert_rating_summary_by_concept.csv
+expert_comment_themes.csv
+internal_expert_evaluation_table.csv
+```
