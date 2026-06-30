@@ -219,14 +219,14 @@ The repository therefore documents the workflow, but it does not redistribute th
 
 The data used by this thesis pipeline is not included in this repository because it may contain WO2Net-derived interview text, validation information, expert evaluation responses, or other restricted research material.
 
-The following folders may exist locally but are not uploaded to GitHub:
+The following folders exist locally but are not uploaded to GitHub:
 
 ```text
 data/
 results/
 ```
 
-These folders may contain:
+These folders contain:
 
 * selected WO2Net evaluation segments
 * enriched segment files
